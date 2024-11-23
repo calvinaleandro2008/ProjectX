@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Full background container with embedded styles -->
+<div class="full-bg-container" style="position: relative; background: url('https://arsitagx-master.s3.ap-southeast-1.amazonaws.com/img-medium/13364/9516/ahas-agung-hasudungan-office-pertamina-at-cepu1537428165-m.jpeg') no-repeat center center; background-size: cover; height: 100%; min-height: 100vh; padding-top: 50px;">
+
+    <!-- Overlay to darken the background for better text visibility -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);"></div>
+
+    <div class="container py-5 position-relative z-index-2">
+        <h2 class="mb-4 text-center text-white">Data Pegawai</h2>
+
+        <!-- Logout Button -->
+        <div class="mb-3 text-right">
+            <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+        </div>
+
+        <!-- Tombol Tambah Pegawai -->
+        <div class="mb-3 text-right">
+            <a href="/tambah" class="btn btn-success">Tambah Pegawai</a>
+        </div>
+
+        <!-- Tabel Data Pegawai -->
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nama</th>
+                        <th>Alamat</th>
+                        <th>Jabatan</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for pegawai in data %}
+                        <tr>
+                            <td>{{ pegawai.id }}</td>
+                            <td>{{ pegawai.nama }}</td>
+                            <td>{{ pegawai.alamat }}</td>
+                            <td>{{ pegawai.jabatan }}</td>
+                            <td>
+                                <a href="/update/{{ pegawai.id }}" class="btn btn-warning btn-sm">Update</a>
+                                <a href="/hapus/{{ pegawai.id }}" class="btn btn-danger btn-sm">Hapus</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <h1>Admin Panel</h1>
+    <p>Welcome, {{ session['user'] }}</p>
+    <nav>
+        <a href="/tampil">Lihat Data Pegawai</a> | 
+        <a href="/logout">Logout</a>
+    </nav>
+    <h2>Tambah Pegawai Baru</h2>
+    <form action="/simpan" method="POST">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required><br><br>
+        <label for="alamat">Alamat:</label>
+        <input type="text" id="alamat" name="alamat" required><br><br>
+        <label for="jabatan">Jabatan:</label>
+        <input type="text" id="jabatan" name="jabatan" required><br><br>
+        <button type="submit">Simpan</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- About Us Section -->
+<section class="about py-5 bg-light" style="background: url('https://images.unsplash.com/photo-1615226882893-17520863eb04?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGVydGFtaW5hfGVufDB8fDB8fHww') no-repeat center center; background-size: cover; color: white;">
+    <div class="container text-center py-5">
+        <h2 class="mb-4 text-shadow">Tentang Kami</h2>
+        <div class="about-content bg-dark bg-opacity-50 p-4 rounded">
+            <p class="lead mb-4">PT Pertamina Patra Niaga adalah anak perusahaan Pertamina yang bergerak di bidang perdagangan olahan minyak bumi. Perusahaan ini memiliki delapan kantor regional dan mengelola puluhan depot minyak milik Pertamina yang tersebar di seantero Indonesia, yaitu:</p>
+            <ul class="list-unstyled">
+                <li>Kota Medan, Sumatera Utara (Wilayah Sumatra bagian utara)</li>
+                <li>Kota Palembang, Sumatera Selatan (Wilayah Sumatra bagian selatan)</li>
+                <li>Jakarta Selatan (Wilayah Jawa bagian barat)</li>
+                <li>Kota Semarang, Jawa Tengah (Wilayah Jawa bagian tengah)</li>
+                <li>Kota Surabaya, Jawa Timur (Wilayah Jawa Timur dan Kepulauan Nusa Tenggara)</li>
+                <li>Kota Balikpapan, Kalimantan Timur (Wilayah Kalimantan)</li>
+                <li>Kota Makassar, Sulawesi Selatan (Wilayah Sulawesi)</li>
+                <li>Manokwari, Papua (Wilayah Kepulauan Maluku dan Papua)</li>
+            </ul>
+            <h5 class="mt-4">Profil Perusahaan</h5>
+            <p>PT Pertamina Patra Niaga (sebelumnya PT Elnusa Harapan, PT Patra Niaga) bergerak dalam berbagai layanan:</p>
+            <ul class="list-unstyled">
+                <li>Penjualan olahan minyak bumi</li>
+                <li>Penyimpanan olahan minyak bumi</li>
+                <li>Pengangkutan olahan minyak bumi</li>
+                <li>Konstruksi fasilitas minyak dan gas</li>
+            </ul>
+            <p><strong>Pendapatan (2020):</strong> US$ 1,445 milyar</p>
+            <p><strong>Laba Bersih (2020):</strong> US$ 61,608 juta</p>
+            <p><strong>Total Aset (2020):</strong> US$ 1,08 milyar</p>
+            <p><strong>Total Ekuitas (2020):</strong> US$ 500,93 juta</p>
+            <p><strong>Jumlah Karyawan (2020):</strong> 593</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Inline CSS for about section */
+    .about {
+        background: url('https://statik.tempo.co/data/2024/10/31/id_1349697/1349697_720.jpg') no-repeat center center;
+        background-size: cover;
+        color: white;
+    }
+
+    .about .about-content {
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+        padding: 30px;
+        border-radius: 8px;
+    }
+
+    .about h2 {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
+    }
+
+    .about ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .about ul li {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+
+    .about .lead {
+        font-size: 1.1rem;
+    }
+</style>
+
+{% endblock %}

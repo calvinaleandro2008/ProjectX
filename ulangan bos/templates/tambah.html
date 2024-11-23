@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid p-0" style="height: 100vh; background-image: url('https://www.amiramedika.co.id/wp-content/uploads/2023/10/WhatsApp-Image-2023-10-19-at-14.45.30-1024x768.jpeg'); background-size: cover; background-position: center;">
+    <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.6);"></div>
+    
+    <div class="container position-relative z-index-1" style="max-width: 800px; padding-top: 120px;">
+        <h2 class="mb-4 text-center text-white" style="font-family: 'Playfair Display', serif; font-weight: 700;">Tambah Pegawai</h2>
+
+        <form method="POST" style="background-color: rgba(255, 255, 255, 0.85); padding: 30px; border-radius: 10px;">
+            <div class="form-group">
+                <label for="nama" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: #333;">Nama:</label>
+                <input type="text" class="form-control" id="nama" name="nama" required style="font-family: 'Montserrat', sans-serif; border-radius: 5px;">
+            </div>
+
+            <div class="form-group">
+                <label for="alamat" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: #333;">Alamat:</label>
+                <textarea class="form-control" id="alamat" name="alamat" rows="3" required style="font-family: 'Montserrat', sans-serif; border-radius: 5px;"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="jabatan" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: #333;">Jabatan:</label>
+                <input type="text" class="form-control" id="jabatan" name="jabatan" required style="font-family: 'Montserrat', sans-serif; border-radius: 5px;">
+            </div>
+
+            <button type="submit" class="btn btn-warning mt-3" style="font-family: 'Montserrat', sans-serif; border-radius: 5px; padding: 12px 25px; font-weight: 700; background-color: #e6b800; border: none;">Simpan</button>
+            <a href="{{ url_for('tampil') }}" class="btn btn-secondary mt-3 ml-3" style="font-family: 'Montserrat', sans-serif; border-radius: 5px; padding: 12px 25px;">Kembali</a>
+        </form>
+    </div>
+</div>
+
+<style>
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .btn-warning {
+        background-color: #e6b800;
+        border: none;
+        color: #fff;
+        font-weight: 700;
+    }
+
+    .btn-warning:hover {
+        background-color: #d4a600;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-secondary {
+        background-color: #555;
+        border: none;
+        color: #fff;
+        font-weight: 700;
+    }
+
+    .btn-secondary:hover {
+        background-color: #333;
+        transition: background-color 0.3s ease;
+    }
+</style>
+{% endblock %}

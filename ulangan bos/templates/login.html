@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Cover Section with Background Image -->
+<section class="cover-container">
+    <div class="overlay"></div>
+    <div class="container d-flex align-items-center justify-content-center h-100">
+        <div class="row justify-content-center w-100">
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-lg border-0 rounded">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h4 class="mb-0">Login</h4>
+                    </div>
+                    <div class="card-body">
+                        {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                                <div class="alert alert-danger" role="alert">
+                                    {{ messages[0] }}
+                                </div>
+                            {% endif %}
+                        {% endwith %}
+                        
+                        <form method="POST">
+                            <div class="form-group mb-4">
+                                <label for="username" class="h5">Username</label>
+                                <input type="text" class="form-control form-control-lg" id="username" name="username" placeholder="Enter Username" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="password" class="h5">Password</label>
+                                <input type="password" class="form-control form-control-lg" id="password" name="password" placeholder="Enter Password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block btn-lg">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Cover Section Styling */
+    .cover-container {
+        background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-2fgCmb-9M5Lea7e0AZlusKB7sd20PMzp0-mm5iWavrEGpV-5Nuz66SVCXJnGBUCv6ediEi4erj4OIbd6LDP7vfhRQ5RQBHb_IVOZhK1lNGPBPyc5W59JMPAQgugH6aBIt7dein14RGL9/s1600/bdanbado.jpg') no-repeat center center;
+        background-size: cover;
+        height: 100vh; /* Ensures the section covers the full viewport height */
+        position: relative; /* Allows overlay to cover the entire section */
+    }
+
+    /* Overlay to darken the background image */
+    
+
+    .card {
+        position: relative;
+        border-radius: 15px; /* Rounded corners for the card */
+        padding: 40px 30px; /* Increased padding for more space */
+        
+    }
+
+    .card-header {
+        border-radius: 10px 10px 0 0; /* Rounded top corners */
+    }
+
+    /* Button Styling */
+    .btn-block {
+        width: 100%;
+        padding: 15px; /* Bigger padding */
+        font-size: 1.1rem; /* Larger button text */
+    }
+
+    .form-control {
+        border-radius: 8px; /* Slightly rounded form input fields */
+        padding: 12px; /* Increased padding for form fields */
+        font-size: 1rem; /* Font size adjustment for easier readability */
+    }
+
+    .alert {
+        margin-bottom: 15px;
+    }
+
+    /* Make the form labels larger */
+    .form-group label {
+        font-size: 1.1rem; /* Larger label text */
+    }
+    
+</style>
+
+{% endblock %}
